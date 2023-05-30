@@ -1,0 +1,473 @@
+/* reset */
+*                           {
+    padding: 0;
+    margin: 0;
+    font-family: "Calibri Light","Calibri", sans-serif;
+    font-size: 18px;
+}
+html {
+    background-image: url("background_white.png");
+}
+/*h1, h2, h3, h4, h5, h6  {*/
+/*    font-size: 18px;*/
+/*}*/
+
+
+body {
+    color: #000000;
+    font-family: "Calibri Light", sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    color: #142d4c;
+    font-size: 250%;
+    font-weight: bold;
+    text-align: center;
+}
+/*cely obdelnicek*/
+main {
+    display: flex;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    margin: 0 5%;
+    background-color: rgba(242, 242, 242, 0.9);
+    /*min-width: 900px;*/
+}
+
+aside, .aside {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    min-width: 250px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #385170;
+}
+
+aside li, .aside li {
+    margin: 20px;
+    text-align: center;
+    background-color: #385170;
+    color: #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+aside a, .aside a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px
+}
+.grid-container:first-child {
+    align-self: center;
+}
+
+.odpovedi, .odpovediGOD {
+    margin: 10px 0;
+}
+
+.odpovediGOD {
+    background-color: #9fffc7;
+}
+.odpovediGOD p {
+    font-weight: bold;
+} /*ODPOVEDI OPRAVOVATELU JSOU ODPOVEDIGOD*/
+
+
+.problemlist {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+.problemlist {
+    /*margin-left: 50px;*/
+    padding: 10px;
+    margin: 10px 20px 20px 20px;
+    /*width: available;*/
+    min-width: 150px;
+    /*height: 100px;*/
+    text-align: start;
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    min-height: 300px;
+    box-shadow: 1px 1px 10px #385170;
+    height: auto;
+}
+
+#detailprikladu {
+    min-height: 500px;
+}
+
+/* ZACATEK NAVBARU*/
+ul.navbar, div.navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden; !*preteceni skryte*!*/
+    background-color:#385170;
+    position: fixed; /* zajisti ze je nahore napevno */
+    top: 0; /* no margin */
+    width: 100%; /* po cele delce */
+    box-shadow: 0 0 10px #385170;
+    z-index: 1;
+}
+
+ul.navbar li, div.navbar button {
+    display: inline;
+}
+
+ul.navbar li a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 1;
+}
+
+/* kdyz najizdim mysi na navbar*/
+ul.navbar a:hover, div.navbar button:hover{
+    background: #9fd3c7;
+    color: black;
+}
+/* pro logo v navbaru */
+.navbar img {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+
+.navright {
+    float: right;
+}
+
+.navbar button:hover > .logocolor, .navbar .logo:hover .logocolor {
+    filter: brightness(0) saturate(100%);
+}
+
+div.navbar button {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #385170;
+    border: none;
+}
+
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #385170;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 53px
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    color: #f2f2f2;
+}
+/*zobrazeni dropdownu*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #9fd3c7;
+    color: black;
+
+}
+
+div.navbar {
+    display: none;
+}
+
+.listusers {
+    margin: 10px;
+}
+
+/* NEW DOC SPECIFIC CSS */
+#freeform, #freeformodpoved {
+    resize: vertical;
+    max-height: 500px;
+    min-height: 150px;
+    background-color: rgba(255,255,255, 0.8);
+    color: black;
+    min-width: 500px;
+    width: 500px;
+}
+
+/*media query navbar*/
+@media screen and (max-width: 768px) {
+    div.navbar {
+        display: flex;
+        justify-content: center;
+    }
+    ul.navbar {
+        display: none;
+    }
+    main {
+        min-width: 180px;
+        margin: 0;
+    }
+    .problemlist {
+        min-width: 180px;
+    }
+    #freeformodpoved {
+        min-width: 200px;
+        width: auto;
+        resize: vertical;
+        max-height: 500px;
+        min-height: 150px;
+        background-color: rgba(255,255,255, 0.8);
+        color: black;
+    }
+}
+/* KONEC NAVBARU */
+
+
+
+/*TLACITKO to change pass*/
+.listusers button, aside button, .detailbutton {
+    background-color: #142d4c;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #f2f2f2;
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    outline: none;
+    padding: 8px;
+    /*position: relative;*/
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+.listusers button:hover, .listusers button:focus, aside button:focus, aside button:hover, .detailbutton:hover, .detailbutton:focus {
+    background: #9fd3c7;
+    color: black;
+}
+
+.listusers button:active, aside button:active, .detailbutton:active {
+    background-color: #142d4c;
+    color: white;
+}
+
+li {
+    list-style-type: none;
+
+}
+
+.submitform, .logoutmyprofile{  /*vstup do databaze*/
+    background-color: #385170;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #f2f2f2;
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    outline: none;
+    padding: 8px;
+    /*position: relative;*/
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+    z-index: 0;
+
+}
+.logoutmyprofile:hover {
+    cursor: pointer;
+    background-color: #9fd3c7;
+    color: black;
+}
+
+
+.submitform:hover {  /*vstup do databaze*/
+    background-color: #9fd3c7;
+    cursor: pointer;
+    color: black;
+}
+
+
+
+.problemlist {
+    display: flex;
+    flex-direction: column;
+}
+
+.problemlist {
+    border-radius: 10px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.problemlist li.nohover:hover, aside li.nohover:hover {
+    background-color: unset;
+    color: black;
+    cursor: default;
+}
+
+aside li.nohover:hover {
+    background-color: #385170;
+    color: #f2f2f2;
+}
+
+.problemheader{
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 0;
+}
+
+li.closed {
+    background-color: #38aa70;
+}
+
+@media screen and (max-width: 1000px) {
+    aside {
+        display: None;
+    }
+
+    main {
+        min-width: 400px;
+        margin: 0;
+        /*margin: 0 0 -50px 0;*/
+        /*min-height: 100%;*/
+    }
+
+}
+
+@media print {
+    div.navbar, ul.navbar {
+        display: None;
+    }
+
+    html {
+        background-color: white;
+        background-image: url("white.jpg");
+    }
+    body {
+        background-color: white;
+    }
+
+    main {
+        background-color: white;
+
+        margin: 0;
+        padding: 0;
+    }
+    .problemlist li {
+        color: black;
+        background-color: white;
+    }
+
+    .problemlist li:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .nohover:hover {
+        cursor: auto;
+    }
+
+    li.nohover{
+        display: none !important;
+        color: black !important;
+        background-color: white !important;
+    }
+
+    li{
+        color: black !important;
+        background-color: white !important;
+    }
+
+    h2 {
+        color: black !important;
+    }
+    aside {
+        display: None;
+    }
+    @page {
+        size: auto;
+        margin: 0;
+    }
+    header h1 {
+        color: black !important;
+    }
+}
+
+.aligndiff img {
+    margin-right: 10px;
+}
+
+.aligndiff {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+
+
+/*#freeform textarea {*/
+/*    min-width: 500px;*/
+/*}*/
+
+#popisprikladu {
+    margin: 10px;
+}
+
+@media screen and (max-width: 768px){ /*media query pro detail*/
+    #popisprikladu {
+        word-wrap: anywhere;
+        width: 100%;
+        max-width: border-box;
+    }
+    header h1 {
+        font-size: 200%;
+        max-width: 98%;
+        justify-content: center;
+    }
+}

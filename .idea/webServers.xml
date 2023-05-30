@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="af66aae8-69ac-45c3-a419-ee25a4b29d25" name="watoad" url="http://wa.toad.cz/~cernym68">
+        <fileTransfer rootFolder="/home/cernym68" accessType="SFTP" host="wa.toad.cz" port="22" sshConfigId="224cdd23-42dc-4a97-b527-61fa8b1fb2dc" sshConfig="cernym68@wa.toad.cz:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="7c0d3fb0-1e92-4159-b298-10c1c1374d2c" name="localhost">
+        <fileTransfer accessType="LOCAL" port="0">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

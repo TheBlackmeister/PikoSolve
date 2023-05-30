@@ -1,0 +1,319 @@
+/* reset */
+*                           {
+    padding: 0;
+    margin: 0;
+    font-family: "Calibri Light","Calibri", sans-serif;
+    font-size: 18px;
+}
+html {
+    background-image: url("background_white.png");
+}
+h1, h2, h3, h4, h5, h6  {
+    font-size: 18px;
+}
+
+
+body {
+    color: #000000;
+    font-family: "Calibri Light", sans-serif;
+}
+
+header h1 {
+    color: #142d4c;
+    font-size: 250%;
+    font-weight: bold;
+    text-align: center;
+}
+/*cely obdelnicek*/
+.overall {
+    padding-top: 100px;
+    padding-bottom: 10px;
+}
+
+
+/* ZACATEK NAVBARU*/
+ul.navbar, div.navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden; !*preteceni skryte*!*/
+    background-color:#385170;
+    position: fixed; /* zajisti ze je nahore napevno */
+    top: 0; /* no margin */
+    width: 100%; /* po cele delce */
+    box-shadow: 0 0 10px #385170;
+}
+
+ul.navbar li, div.navbar button {
+    display: inline;
+}
+
+ul.navbar li a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* kdyz najizdim mysi na navbar*/
+ul.navbar a:hover, div.navbar button:hover{
+    background: #9fd3c7;
+    color: black;
+}
+/* pro logo v navbaru */
+.navbar img {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+
+.navright {
+    float: right;
+}
+
+.navbar button:hover > .logocolor,  .navbar .logo:hover .logocolor {
+    filter: brightness(0) saturate(100%);
+}
+
+div.navbar button {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    background-color: #385170;
+    border: none;
+}
+
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #385170;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 53px
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    color: #f2f2f2;
+}
+/*zobrazeni dropdownu*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #9fd3c7;
+    color: black;
+
+}
+
+div.navbar {
+    display: none;
+}
+
+
+
+/* KONEC NAVBARU */
+
+/* FOOTER */
+footer {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    flex-direction: row;
+    text-decoration: none;
+    width: 100%;
+    background-color: #385170;
+    color: #f2f2f2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 0 10px #385170;
+    justify-content: center;
+
+}
+
+
+     /* TLACITKO SUBMIT */
+ .submitform {
+     background-color: #385170;
+     border: 1px solid transparent;
+     border-radius: 3px;
+     box-sizing: border-box;
+     color: #f2f2f2;
+     cursor: pointer;
+     display: inline-block;
+     margin: 0;
+     outline: none;
+     padding: 8px;
+     position: relative;
+     text-align: center;
+     text-decoration: none;
+     user-select: none;
+     -webkit-user-select: none;
+     touch-action: manipulation;
+     vertical-align: baseline;
+     white-space: nowrap;
+ }
+
+.submitform:hover, .submitform:focus {
+    background: #9fd3c7;
+    color: black;
+}
+
+.submitform:active {
+    background-color: #142d4c;
+    color: white;
+}
+
+li {
+    list-style-type: none;
+
+}
+/* KONEC TLACITKA SUBMIT */
+
+
+/*FORMULAR*/
+
+.flexform
+{
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    width: 500px;
+    padding: 10px;
+    box-shadow: 1px 1px 10px #385170;
+}
+
+.flexform p
+{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 10px;
+}
+
+.require::before { /*vsechny povinne veci jsou cervene zvyraznene*/
+    content: '*';
+    color: red;
+}
+
+
+.row {
+    /*display: flex;*/
+    padding: 10px;
+    /*justify-content: space-between;*/
+}
+
+/*media query navbar*/
+@media screen and (max-width: 768px) {
+    div.navbar {
+        display: flex;
+        justify-content: center;
+
+    }
+    ul.navbar {
+        display: none;
+    }
+
+    .flexform {
+        margin: 3%;
+        width: auto;
+        min-width: 280px;
+    }
+}
+
+@media print {
+    div.navbar, ul.navbar {
+        display: None;
+    }
+
+    html {
+        background-color: white;
+        background-image: url("white.jpg");
+    }
+    body {
+        background-color: white;
+    }
+
+    main {
+        background-color: white;
+
+        margin: 0;
+        padding: 0;
+    }
+    .problemlist li {
+        color: black;
+        background-color: white;
+    }
+
+    .problemlist li:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .nohover:hover {
+        cursor: auto;
+    }
+
+    li.nohover{
+        display: none !important;
+        color: black !important;
+        background-color: white !important;
+    }
+
+    li{
+        color: black !important;
+        background-color: white !important;
+    }
+
+    h2 {
+        color: black !important;
+    }
+    aside {
+        display: None;
+    }
+    @page {
+        size: auto;
+        margin: 0;
+    }
+    .flexform {
+        background-color: white !important;
+        color: black !important;
+    }
+    header h1 {
+        color: black !important;
+    }
+}
+/* KONEC FORMULARE */
+
